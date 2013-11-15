@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  neighbourhood: MyString
+  summary: MyText
+  seats: 1
+  hours_open: 1
+  hours_close: 1
+
+two:
+  name: MyString
+  address: MyString
+  neighbourhood: MyString
+  summary: MyText
+  seats: 1
+  hours_open: 1
+  hours_close: 1
