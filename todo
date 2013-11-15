@@ -1,5 +1,9 @@
 To do:
 
+Finish restricting what unregistered users can do:
+See bottom of this Sorcery Doc
+https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication
+
 Create navigation links (header)
 
   signin
@@ -11,4 +15,5 @@ Create navigation links (header)
 
 Done
 Seeded db(for lke 2 hours)
+Installed Sorcery/User_sessions
 
