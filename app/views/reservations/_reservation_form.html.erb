@@ -1,11 +1,11 @@
 <h1>Make a reservation</h1>
 
-<%= form_for @reservation do |f| %>
-  <div class="field">
-    <%= f.label :restaurant_id %><br />
-    <%= f.text_field :restaurant_id %>
-  </div>
-  <div class="field">
+<%= form_for([@restaurant, @reservation]) do |f| %>
+<%#= form_for(@reservation) do |f| %>
+<!--   <div class="field">
+    <%#= f.label :restaurant_id %><br />
+    <%#= f.text_field :restaurant_id %>
+  <div class="field"> -->
     <%= f.label :party_size %><br />
     <%= f.select :party_size, (1..20) %>
   </div>

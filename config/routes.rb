@@ -6,8 +6,9 @@ SeatYourself::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
   root :to => "restaurants#index"
   resources :users
-  resources :restaurants
-  resources :reservations
+  resources :restaurants do
+    resources :reservations
+  end
   resources :user_sessions
   
   get 'login' => 'user_sessions#new', :as => :login

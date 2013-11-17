@@ -18,7 +18,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
-      redire_to restaurant_path(@restaurant), notice: "Reservation submitted."
+      redirect_to restaurant_path(@restaurant), notice: "Reservation submitted."
     else
       render :action => :show
     end
