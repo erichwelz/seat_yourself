@@ -1,0 +1,23 @@
+<h1>Make a reservation</h1>
+
+<%= form_for @reservation do |f| %>
+  <div class="field">
+    <%= f.label :restaurant_id %><br />
+    <%= f.text_field :restaurant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :party_size %><br />
+    <%= f.select :party_size, (1..20) %>
+  </div>
+  <div class="field">
+    <%= f.label "Date" %><br />
+    <%= f.date_select :meal_date %>
+  </div>
+  <div class="field">
+    <%= f.label "Time" %><br />
+    <%= f.time_select :meal_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit reservation" %>
+  </div>
+<% end %>
