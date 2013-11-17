@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  meal_time: 2013-11-17 15:18:47
+  meal_date: 2013-11-17
+  party_size: 1
+
+two:
+  meal_time: 2013-11-17 15:18:47
+  meal_date: 2013-11-17
+  party_size: 1
