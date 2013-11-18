@@ -14,14 +14,41 @@ class ReservationsController < ApplicationController
     end
   end
 
+   def enough_space?
+    proposed_party_size = @reservation.party_size
+     #if proposed pary_size is greater than seats_available, reject reservation and inform user, else accept reservation and confirm with email
+    if find_seats_available >= proposed_party_size
+      return true
+    else 
+      false
+    end 
+  end
+
+  def find_seats_available #checked!
+    #find the right restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    seats_available = @restaurant.seats
+    #whenever we make a reservation, it subtract the number of seats reserved from the total number of seats.
+
+    #for each reservation subtract the party_size from seats available.
+
+    @restaurant.reservations.each do |r|
+      seats_available -= r.party_size
+    end
+    seats_available
+  end
+
   def create
     #@reservation = Reservation.new(reservation_params)
     @reservation = @restaurant.reservations.build(reservation_params)
     @reservation.user_id = current_user.id
-
-
-    if @reservation.save
-      redirect_to restaurant_path(@restaurant), notice: "Reservation submitted."
+    #validates :enough_space? => true
+    puts " ---------------------------------------------------------------------------------------------------------------------------------"
+    puts Restaurant.find_seats_available
+    puts " ---------------------------------------------------------------------------------------------------------------------------------"
+    if Restaurant.enough_space? 
+      @reservation.save
+      redirect_to current_user ,notice: "Reservation submitted."
     else
       render :action => :show
     end

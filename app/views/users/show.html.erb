@@ -6,6 +6,8 @@
 </p>
 
 <ul>
+  <% if @reservations != nil %>
+
   <% @reservations.each do |r| %>
 
   <li>Restaurant Name: <%= r.restaurant.name %><br/>
@@ -15,6 +17,12 @@
 
   <% end %>
 </ul>
+
+  <% else %>
+
+  <%= link_to "View Restaurants to get started", restaurants_path %>
+
+  <% end %>
 
 
 <!-- <p>

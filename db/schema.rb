@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20131117204229) do
 
   create_table "reservations", force: true do |t|
-    t.time     "meal_time"
+    t.datetime "meal_time"
     t.integer  "party_size"
     t.datetime "created_at"
     t.datetime "updated_at"
