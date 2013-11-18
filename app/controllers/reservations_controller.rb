@@ -44,13 +44,14 @@ class ReservationsController < ApplicationController
     @reservation.user_id = current_user.id
     #validates :enough_space? => true
     puts " ---------------------------------------------------------------------------------------------------------------------------------"
-    puts Restaurant.find_seats_available
+    puts find_seats_available
     puts " ---------------------------------------------------------------------------------------------------------------------------------"
-    if Restaurant.enough_space? 
+    if enough_space? 
       @reservation.save
       redirect_to current_user ,notice: "Reservation submitted."
     else
-      render :action => :show
+      flash[:notice] = "Sorry, not enough seats for your party"
+      render :action => :new
     end
   end
 
@@ -64,6 +65,10 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to current_user, notice: "Reservation cancelled"
+
   end
   private
   def reservation_params

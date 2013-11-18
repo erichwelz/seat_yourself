@@ -14,6 +14,9 @@
   Description: <%= r.restaurant.summary %><br/>
   Party size: <%= r[:party_size] %><br/>
   Meal Time: <%= r[:meal_time] %></li>
+  <%#= link_to 'Cancel Reservation', users_path %> 
+
+  <%= link_to "Cancel Reservation", restaurant_reservation_path(r.restaurant, r), :confirm => "Are you sure you wish to cancel?", :method => :delete %>
 
   <% end %>
 </ul>

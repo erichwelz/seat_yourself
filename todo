@@ -1,15 +1,28 @@
 To do:
 
+
 Reservation page: Limit hours select to open times
-Possible solution: http://stackoverflow.com/questions/14490355/populating-a-custom-time-field-on-ruby-on-rails-with-simple-form
+E - http://stackoverflow.com/questions/14490355/populating-a-custom-time-field-on-ruby-on-rails-with-simple-form
 
-Finish restricting what unregistered users can do:
+Restrictions:
+ What unregistered users can do:
+ what can be seen in new users view
+ Ensure users can only see own reservations > Users Controller
 See bottom of this Sorcery Doc
-https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication 
+https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication
+add autologon after create new user
 
-Restrict what can be seen in new users view
+  Hourly seating restrictions (modify seat_available method)
 
-Create restaurant categories
+Create restaurant categories - model (many to many)
+  Option to display restaurants by category / view by neighborhood
+
+Would be nice:
+  
+  Testing
+ E - Postgres
+  Try to eliminate scoping issues
+  UTC offsets for Toronto (IE we are in EST -0500)
 
 
 Done
@@ -19,4 +32,6 @@ https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication
 - Added reservations model & controller
 - added associations between users/restaurants/reservations
 
-- built Reservation form (returning nils)
+- built Reservation form - working
+
+
