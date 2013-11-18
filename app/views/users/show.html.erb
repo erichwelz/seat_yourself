@@ -8,9 +8,10 @@
 <ul>
   <% @reservations.each do |r| %>
 
-  <li>Restaurant Name<%= r[:restaurant_name] %></li>
-  <li>Party size: <%= r[:party_size] %></li>
-  <li>Meal Time: <%= r[:meal_time] %></li>
+  <li>Restaurant Name: <%= r.restaurant.name %><br/>
+  Description: <%= r.restaurant.summary %><br/>
+  Party size: <%= r[:party_size] %><br/>
+  Meal Time: <%= r[:meal_time] %></li>
 
   <% end %>
 </ul>
