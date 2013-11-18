@@ -8,4 +8,11 @@
 <p> <%=@restaurant.summary%></p>
 <p>Hours: <%= format_time (@restaurant.hours_open) %> - <%= format_time (@restaurant.hours_close) %></p>
 
+<!-- If-else statement to show the resercation form if the user is logged in. If not logged in, provide links to log in. -->
+<% if current_user %>
+
 <%= render '/reservations/reservation_form' %>
+
+<% else %>
+  <%= link_to "Log in to create a reservation.", :login  %>
+<% end %>
