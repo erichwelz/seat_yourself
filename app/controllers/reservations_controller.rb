@@ -15,7 +15,10 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    #@reservation = Reservation.new(reservation_params)
+    @reservation = @restaurant.reservations.build(reservation_params)
+    @reservation.user_id = current_user.id
+
 
     if @reservation.save
       redirect_to restaurant_path(@restaurant), notice: "Reservation submitted."
