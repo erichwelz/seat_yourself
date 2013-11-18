@@ -1,7 +1,5 @@
 To do:
 
-Restaurant page: Helper function for formatting restaurant hours
-
 Reservation page: Limit hours select to open times
 Possible solution: http://stackoverflow.com/questions/14490355/populating-a-custom-time-field-on-ruby-on-rails-with-simple-form
 
@@ -11,21 +9,14 @@ https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication
 
 Restrict what can be seen in new users view
 
-Create navigation links (header)
-
-  signin
-    logout
-    back to restaurants
-    reservations
-
-
-
+Create restaurant categories
 
 
 Done
-Seeded db(for lke 2 hours)
+Seeded db
 Installed Sorcery/User_sessions with this guide: 
 https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication 
 - Added reservations model & controller
 - added associations between users/restaurants/reservations
 
+- built Reservation form (returning nils)
