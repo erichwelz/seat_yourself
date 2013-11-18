@@ -15,7 +15,8 @@
   </div>
   <div class="field">
     <%= f.label "Time" %><br />
-    <%= f.time_select :meal_time %>
+    <%#= f.time_select :meal_time %>
+    <%= f.time_select :meal_time, {:minute_step => 60} %>
   </div>
   <div class="actions">
     <%= f.submit "Submit reservation" %>

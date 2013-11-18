@@ -1,6 +1,9 @@
 To do:
 
-Helper function for formatting restaurant hours
+Restaurant page: Helper function for formatting restaurant hours
+
+Reservation page: Limit hours select to open times
+Possible solution: http://stackoverflow.com/questions/14490355/populating-a-custom-time-field-on-ruby-on-rails-with-simple-form
 
 Finish restricting what unregistered users can do:
 See bottom of this Sorcery Doc
@@ -14,6 +17,8 @@ Create navigation links (header)
     logout
     back to restaurants
     reservations
+
+
 
 
 
