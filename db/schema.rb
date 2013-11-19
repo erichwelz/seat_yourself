@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20131119204716) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
     t.integer  "reservation_id"
   end
 

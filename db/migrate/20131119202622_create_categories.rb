@@ -5,6 +5,6 @@ class CreateCategories < ActiveRecord::Migration
       t.integer :restaurant_id
 
       t.timestamps
-    endset 
+    end 
   end
 end

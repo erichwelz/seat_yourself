@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    @categories = Categories.all
+    @categories = Category.all
   end
 
   def destroy
