@@ -9,8 +9,8 @@
   <body>
 
   <div id="nav">
-    <% if current_user %>
     <%= link_to "Restaurants", restaurants_path %>
+    <% if current_user %>
     <%= link_to "My Reservations", user_path(current_user.id) %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
       <%= link_to "Logout", :logout, method: :post %>

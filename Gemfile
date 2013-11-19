@@ -37,7 +37,11 @@ end
  gem 'sorcery'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+# gem 'unicorn
+group :test, :development do
+ gem 'rspec-rails'
+ gem 'factory_girl'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
