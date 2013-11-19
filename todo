@@ -35,3 +35,9 @@ https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication
 - built Reservation form - working
 
 
+
+
+
+Notes: users show.html.erb has notice commented out as double notices were displaying
+
+

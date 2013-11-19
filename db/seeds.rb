@@ -15,6 +15,18 @@
 #   {hours_close: 21}]
 # )
 
+Categories.create!(
+  :category_name => 'Pescetarian',
+  )
+
+Categories.create!(
+  :category_name => 'Italian'
+  )
+
+Categories.create!(
+  :category_name => 'Tacos'
+  )
+
 Restaurant.create!(
   :name => 'Crocodile Rock',
   :address  =>'22 Duncan Street',
@@ -23,7 +35,8 @@ Restaurant.create!(
   :seats => 10,
   :hours_open =>18,
   :hours_close => 21
-)
+  )
+
 
 Restaurant.create!(
   :name => 'Irish Pub',
@@ -34,4 +47,19 @@ Restaurant.create!(
   :hours_open =>18,
   :hours_close => 21
 )
+
+# Categories.create!(
+#   :category_name => 'Italian',
+#   :restaurant_id => 1,
+#   :category_id => 1
+#   )
+
+# Categories.create!(
+#   :category_name => 'Pescetarian',
+#   :restaurant_id => 2,
+#   :category_id => 2
+#   )
+
+
+
 
