@@ -20,7 +20,7 @@ Restaurant.create!(
   :address  =>'22 Duncan Street',
   :neighbourhood => 'Fashion District',
   :summary => 'Cougar Lounge',
-  :seats => 100,
+  :seats => 10,
   :hours_open =>18,
   :hours_close => 21
 )
@@ -30,7 +30,7 @@ Restaurant.create!(
   :address  =>'Queen Street',
   :neighbourhood => 'Fashion District',
   :summary => 'Hipster Lounge',
-  :seats => 100,
+  :seats => 10,
   :hours_open =>18,
   :hours_close => 21
 )

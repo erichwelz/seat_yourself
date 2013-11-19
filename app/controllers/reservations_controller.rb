@@ -14,47 +14,18 @@ class ReservationsController < ApplicationController
     end
   end
 
-   def enough_space?
-    proposed_party_size = @reservation.party_size
-     #if proposed party_size is greater than seats_available, reject reservation and inform user, else accept reservation and confirm with email
-    if find_seats_available >= proposed_party_size
-      return true
-    else 
-      false
-    end 
-  end
-
-  def find_seats_available #checked!
-    #find the right restaurant
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    seats_available = @restaurant.seats
-    #whenever we make a reservation, it subtract the number of seats reserved from the total number of seats.
-
-    #for each reservation subtract the party_size from seats available.
-
-    @restaurant.reservations.each do |r|
-      seats_available -= r.party_size
-    end
-    seats_available
-  end
 
   def create
 
-    # @reservation = Reservation.new(
-    #   :reservation => params[:restaurant][:reservation],
-    #   :meal_time => @meal_time,
-    #   :user_id => @current_user.id,
-    #   :restaurant_id => @restaurant.id
-    #   )
-    #Method equivalent using build
     @reservation = @restaurant.reservations.build(reservation_params)
 
     @reservation.user_id = current_user.id
     #validates :enough_space? => true
-    puts " ---------------------------------------------------------------------------------------------------------------------------------"
-    puts find_seats_available
-    puts " ---------------------------------------------------------------------------------------------------------------------------------"
-    if enough_space? 
+    # puts " ---------------------------------------------------------------------------------------------------------------------------------"
+    # puts find_seats_available
+    # puts " ---------------------------------------------------------------------------------------------------------------------------------"
+
+    if @restaurant.enough_space?(@reservation)
       @reservation.save
       redirect_to current_user ,notice: "Reservation submitted."
     else
