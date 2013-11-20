@@ -11,8 +11,10 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
 
-    if current_user
+    if set_user == current_user
       @reservations = @user.reservations
+    else
+      redirect_to restaurants_path
     end
   end
 

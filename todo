@@ -1,5 +1,6 @@
-To do:
+Done - modified reservation.form to only allow reservations from current year >> http://apidock.com/rails/ActionView/Helpers/DateHelper/datetime_select
 
+To do:
 
 Reservation page: Limit hours select to open times
 E - http://stackoverflow.com/questions/14490355/populating-a-custom-time-field-on-ruby-on-rails-with-simple-form
@@ -7,14 +8,10 @@ E - http://stackoverflow.com/questions/14490355/populating-a-custom-time-field-o
 Restrictions:
  What unregistered users can do:
  what can be seen in new users view
- Ensure users can only see own reservations > Users Controller
-See bottom of this Sorcery Doc
-https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication
-add autologon after create new user
 
   Hourly seating restrictions (modify seat_available method)
 
-Create restaurant categories - model (many to many)
+  Create restaurant categories - model (many to many)
   Option to display restaurants by category / view by neighborhood
 
 Would be nice:
@@ -22,10 +19,9 @@ Would be nice:
   Testing
  E - Postgres
   Try to eliminate scoping issues
-  UTC offsets for Toronto (IE we are in EST -0500)
 
+DONE:
 
-Done
 Seeded db
 Installed Sorcery/User_sessions with this guide: 
 https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication 
@@ -33,6 +29,8 @@ https://github.com/NoamB/sorcery/wiki/Simple-Password-Authentication
 - added associations between users/restaurants/reservations
 
 - built Reservation form - working
+- check built for if time/capacity exists
+- added autologon after create new user
 
 
 

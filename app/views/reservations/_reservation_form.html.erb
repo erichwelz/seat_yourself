@@ -16,7 +16,8 @@
     <%= f.label "Time" %><br />
     <%#= f.time_select :meal_time %>
     <%#= f.time_select :meal_time, {:minute_step => 60} %>
-    <%= f.datetime_select :meal_time, :ampm => false, :minute_step => 60 %>
+    <%#= f.datetime_select :meal_time, :ampm => false, :minute_step => 60 %>
+    <%= f.datetime_select :meal_time, :ampm => false, :start_year => Time.now.year, :start_hour => @restaurant.hours_open,  :end_hour => @restaurant.hours_close, :minute_step => 60 %>
   </div>
     <div class="field">
     <%= f.label :party_size %><br />

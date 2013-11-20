@@ -17,18 +17,10 @@ class ApplicationController < ActionController::Base
     #  Sessioncontroller.destroy 
 
     @current_user ||= User.find(session[:user_id]) if session[:user_id] # ||= (or equals) assigns item if item currently nil
-
-
-    
-  end
-
-  helper_method :current_user
-    
-
-
-
-
-
+  end 
+ 
+   helper_method :current_user
+  
 
 end
 
