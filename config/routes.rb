@@ -16,8 +16,6 @@ SeatYourself::Application.routes.draw do
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
-
-
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
