@@ -15,38 +15,49 @@
 #   {hours_close: 21}]
 # )
 
-Categories.create!(
-  :category_name => 'Pescetarian',
-  )
+# Categories.create!(
+#   :category_name => 'Pescetarian',
+#   )
 
-Categories.create!(
-  :category_name => 'Italian'
-  )
+# Categories.create!(
+#   :category_name => 'Italian'
+#   )
 
-Categories.create!(
-  :category_name => 'Tacos'
-  )
+# Categories.create!(
+#   :category_name => 'Tacos'
+#   )
+
+# Restaurant.create!(
+#   :name => 'Crocodile Rock',
+#   :address  =>'22 Duncan Street',
+#   :neighbourhood => 'Fashion District',
+#   :summary => 'Cougar Lounge',
+#   :seats => 10,
+#   :hours_open =>18,
+#   :hours_close => 21
+#   )
+
+
+# Restaurant.create!(
+#   :name => 'Irish Pub',
+#   :address  =>'Queen Street',
+#   :neighbourhood => 'Fashion District',
+#   :summary => 'Hipster Lounge',
+#   :seats => 10,
+#   :hours_open =>18,
+#   :hours_close => 21
+# )
 
 Restaurant.create!(
-  :name => 'Crocodile Rock',
-  :address  =>'22 Duncan Street',
+  :name => 'Taco Bell',
+  :address  =>'King Street',
   :neighbourhood => 'Fashion District',
-  :summary => 'Cougar Lounge',
-  :seats => 10,
-  :hours_open =>18,
-  :hours_close => 21
-  )
-
-
-Restaurant.create!(
-  :name => 'Irish Pub',
-  :address  =>'Queen Street',
-  :neighbourhood => 'Fashion District',
-  :summary => 'Hipster Lounge',
-  :seats => 10,
-  :hours_open =>18,
-  :hours_close => 21
+  :summary => 'Mexican Restaurant',
+  :seats => 100,
+  :hours_open =>11,
+  :hours_close => 20
 )
+
 
 # Categories.create!(
 #   :category_name => 'Italian',

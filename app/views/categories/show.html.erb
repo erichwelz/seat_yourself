@@ -1,2 +1,10 @@
 <h1>Categories#show</h1>
 <p>Find me in app/views/categories/show.html.erb</p>
+
+<p><%= @category.category_name  %></p>
+
+<% @category.restaurants.each do |x| %>
+
+  <p><%= x.name %></p>
+
+  <% end %> 
